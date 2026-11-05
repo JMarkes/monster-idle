@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1793888771|1375424';
+const CACHE_VERSION = '1793888959|1461041';
 /** @type {string} */
 const CACHE_PREFIX = 'Monster Idle-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -72,7 +72,7 @@ async function fetchAndCache(event, cache, isCacheable) {
 	let response = await event.preloadResponse;
 	if (response == null) {
 		// Or, go over network.
-		response = await self.fetch(event.request);
+		response = await self.fetch(event.request, { cache: 'no-cache' });
 	}
 
 	if (ENSURE_CROSSORIGIN_ISOLATION_HEADERS) {
