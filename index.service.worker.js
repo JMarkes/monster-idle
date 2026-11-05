@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1793891992|1448235';
+const CACHE_VERSION = '1793892623|1272418';
 /** @type {string} */
 const CACHE_PREFIX = 'Monster Idle-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
